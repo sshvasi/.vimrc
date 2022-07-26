@@ -14,7 +14,6 @@ let g:lightline = {
   \ }
 
 nnoremap ff :Prettier<CR>
-nnoremap <C-f> :NERDTreeFind<CR>
 nnoremap <leader><leader> :NERDTreeToggle<CR>
 
 call plug#begin()
