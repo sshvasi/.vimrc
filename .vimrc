@@ -54,7 +54,7 @@ nnoremap <c-w> <c-w>w
 nnoremap <c-h> <c-w>h
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
-nnoremap <c-l> <c-w>
+nnoremap <c-l> <c-w>l
 
 nnoremap <leader>ff :Prettier<cr>
 nnoremap <leader><leader> :NERDTreeToggle<cr>
