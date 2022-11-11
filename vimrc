@@ -38,14 +38,11 @@ set ttimeoutlen=1              " Key code delays.
 set ttyfast                    " Slow scrolling.
 " Russian keyboard.
 set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
+set guicursor=n-v-c-i:block
 
-colorscheme codedark
 
 let mapleader = "\<space>"
 let maplocalleader = "\<space>"
-
-let g:lightline = {'colorscheme': 'codedark'}
-let g:codedark_conservative=1
 
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
@@ -58,11 +55,7 @@ nnoremap <c-l> <c-w>l
 
 nnoremap <leader>ff :Prettier<cr>
 nnoremap <leader><leader> :NERDTreeToggle<cr>
-nnoremap <leader>hh :nohlsearch<cr>
-
-" Start NERDTree when Vim is started without file arguments.
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
+nnoremap <c-n> :nohlsearch<cr>
 
 call plug#begin()
   " Languages.
@@ -72,7 +65,13 @@ call plug#begin()
   Plug 'preservim/nerdtree'
   Plug 'airblade/vim-gitgutter'
   Plug 'prettier/vim-prettier'
-  " UI.
-  Plug 'itchyny/lightline.vim'
-  Plug 'tomasiser/vim-code-dark'
+  " UI
+  Plug 'projekt0n/github-nvim-theme'
 call plug#end()
+
+colorscheme github_dark_default
+
+let g:github_comment_style = "NONE"
+let g:github_keyword_style = "NONE"
+let g:github_function_style = "NONE"
+let g:github_variable_style = "NONE"
